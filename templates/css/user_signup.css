@@ -27,21 +27,8 @@
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background-color: #f1f1f1; 
- 
-      /* width:270px; */
-        /* margin:0 auto; */
-        /* background-color:#499c4b; */
-        /* height:280px;  */
-      /* padding:20px; */
-      /* margin-top: 3%; */
-      /* margin-right: 5%; */
-        /* border-top:5px solid rgb(239, 243, 243);  */
-        /* border-radius:4px;	 */
-      /* position:relative;  */
-    } 
- 
-  
+    background-color: #f1f1f1;  
+    }  
   /* Add a background color when the inputs get focus */
   input[type=text]:focus, input[type=password]:focus {
     background-color: transparent;
@@ -53,14 +40,10 @@
     background-color: rgb(31, 85, 85);
     color: white;
     margin-top: 3%;
-    padding: 10px 30px;
-    /* margin: 8px 0; */
+    padding: 10px 30px; 
     margin-left: 30%;
     border: none;
-    border-radius: 10%;
-    /* cursor: pointer; */
-    /* width: 20%; */
-    /* opacity: 0.9; */
+    border-radius: 10%; 
   }
   
   button:hover {

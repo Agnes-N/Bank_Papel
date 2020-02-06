@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../css/user_dashboard.css">
+    <script src=".../js/user_dashboard.js"></script>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <a href="#home">Logout</a>
+            <a href="#home">Account history</a>
+            <a href="#home" onclick="document.getElementById('id01').style.display='block'">Create bank account</a>
+        </nav>
+
+        <!-- <button onclick="document.getElementById('id01').style.display='block'">Sign
+                Up</button>  -->
+        <!-- Button to open the modal -->
+
+
+        <!-- The Modal (contains the Sign Up form) -->
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">close</span>
+            <form class="modal-content" action=" ">
+                <div class="container">
+                    <h1 class="accountform">Please fill in this form to create a bank account.</h1>
+                    <!-- <p>Please fill in this form to create a bank account.</p> -->
+                    <hr>
+                    <label for="fname"><b>First Name</b></label>
+                    <input type="text" placeholder="Enter first name" name="fname" required>
+
+                    <label for="lname"><b>Last Name</b></label>
+                    <input type="text" placeholder="Enter last name" name="fname" required>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+  
+                    <label for="address"><b>Address</b></label>
+                    <input type="text" placeholder="Enter address" name="address" required>
+  
+                    <label for="occupation"><b>Occupation</b></label>
+                    <input type="text" placeholder="Enter occupation" name="occupation" required>
+  
+                    <label for="tel"><b>Phone number</b></label>
+                    <input type="tel" placeholder="Enter tel" name="tel" range required>
+ 
+                    <div class="clearfix">
+
+                        <button type="submit" class="submits" id="account">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </section>
+</body>
+
+</html>

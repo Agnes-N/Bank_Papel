@@ -5,8 +5,7 @@ body{
     background-image: url('../images/bank12.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* padding-bottom: 90px; */
-    /* width: 100%; */
+    
     height: 500px;
   }
   
@@ -59,8 +58,9 @@ body{
     height:50px;
     border: none;
     background-color: rgb(241, 243, 239);
+    border-radius: 20px;
   }
-  
+ 
   /* footer section */
   
   .footer {

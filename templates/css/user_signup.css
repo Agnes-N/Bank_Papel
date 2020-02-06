@@ -1,11 +1,10 @@
- /* user signup form */
-
- body{
-    background-image: url('../images/si1.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  } 
- fieldset{
+/* user signup form */ 
+body{
+  background-image: url('../images/si1.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+fieldset{
   background-color: transparent;
   width: 500px;
   height: 350px;
@@ -15,72 +14,61 @@
   border: none;
 }
 
+.fill_form{
+  text-align: center;
+}
+
 .loghere{
   text-align: center;
 }
 
-  * {box-sizing: border-box}
-  /* Full-width input fields */
-    input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background-color: #f1f1f1; 
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background-color: #f1f1f1;  
+}  
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: rgb(31, 85, 85);
+  color: white;
+  margin-top: 3%;
+  padding: 10px 30px; 
+  margin-left: 30%;
+  border: none;
+  border-radius: 10%; 
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+} 
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+.signupbtn {
+  width: 100%;
+}
+}  
  
-      /* width:270px; */
-        /* margin:0 auto; */
-        /* background-color:#499c4b; */
-        /* height:280px;  */
-      /* padding:20px; */
-      /* margin-top: 3%; */
-      /* margin-right: 5%; */
-        /* border-top:5px solid rgb(239, 243, 243);  */
-        /* border-radius:4px;	 */
-      /* position:relative;  */
-    } 
- 
-  
-  /* Add a background color when the inputs get focus */
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: transparent;
-    outline: none;
-  }
-  
-  /* Set a style for all buttons */
-  button {
-    background-color: rgb(31, 85, 85);
-    color: white;
-    margin-top: 3%;
-    padding: 10px 30px;
-    /* margin: 8px 0; */
-    margin-left: 30%;
-    border: none;
-    border-radius: 10%;
-    /* cursor: pointer; */
-    /* width: 20%; */
-    /* opacity: 0.9; */
-  }
-  
-  button:hover {
-    opacity:1;
-  }
- 
-  /* Float cancel and signup buttons and add an equal width */
-   .signupbtn {
-    float: left;
-    width: 50%;
-  }
-  
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
-  } 
- 
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 300px) {
-    .signupbtn {
-      width: 100%;
-    }
-  }  

@@ -6,8 +6,17 @@
     background-repeat: no-repeat;
     background-size: cover;
   } 
- fieldset{
-=======
+
+.link{
+  color: #f1f1f1;
+  text-decoration: none;
+} 
+
+.thebutton{
+  display: inline-flex;
+    
+ }
+  
 /* user signup form */ 
 body{
   background-image: url('../images/si1.jpeg');
@@ -85,3 +94,4 @@ button:hover {
   }
 }  
  
+up

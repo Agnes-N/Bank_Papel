@@ -5,34 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>User login  </title>
-    <link rel="stylesheet" type="text/css" href="../css/user_signup.css">
-    <script src=".../js/user_signup.js"></script>
+    <title>User login </title>
+    <link rel="stylesheet" type="text/css" href="../css/user_login.css">
+
 </head>
 
 <body>
-    <section class="user-signup">
-        <fieldset>
-            <h2 class="loghere">Sign Up Form</h2> 
-            <p class="fill_form" style="text-align: center;">Please fill in this form to create an account.</p>
-            <form class="signup">
-                <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    <br>
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <br>
-                    <label for="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                    <br>
-                    <div class="thebutton">
-                    <button type="submit" class="signup"> <a href="user_signup.html" class="link">SignUp</a> </button>
-                    <button><a href="user_signup.html" class="link">Login</a></button></div>
+    <div id="container">
+        <div id="tabs">
+            <p id="lt" class="tabs" onclick="loginTabFun()">login</p>
+            <p id="rt" class="tabs" onclick="regTabFun()">Sign up</p>
+
+            <div id="clear"></div>
+        </div>
+
+        <div id="cont">
+            <div id="login" class="comm">
+                <input id="se" type="email" placeholder="Email" required />
+                <input id="sp" type="password" placeholder="Password" required />
+                <input type="submit" onclick="window.location = 'user_dashboard.html';" value="Submit" />
+
+                <p onclick="forTabFun()">Forget Password?</p>
+            </div>
+            <div id="register" class="comm">
+                <input id="re" type="email" placeholder="Email" required />
+                <input id="rp" type="password" placeholder="Password" required />
+                <input id="rrp" type="password" placeholder="Re write Password" required />
+                <input type="submit" onclick="loginTabFun()" value="Submit" />
+
+            </div>
+            <div id="forgot" class="comm">
+                <h3>Forgot Password</h3>
+                <div>
+                    <input id="fe" type="email" placeholder="Email" required />
+                    <input type="submit" onclick="forgot()" value="Submit" />
                 </div>
-            </form>
-        </fieldset>
-    </section>
+            </div>
+        </div>
+    </div>
+    <script src="../js/user_login.js"></script>
 </body>
 
 </html>

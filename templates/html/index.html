@@ -5,43 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Papel Project</title>
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <title>Papel Project</title>  
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/index.css"> 
+    <script src="https://kit.fontawesome.com/da7b84dcbd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <section class="landing_picture">
         <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About us</a>
             <a href="#contact">Contact us</a>
+            <a href="#about">About us</a>
+            <a href="#home">Home</a>
         </nav>
+        <div class="paragraph">
+            <p>We are committed to our customers and being the bank that you deserve.</p>
+            <p>Nothing is impossible. We can help you achieve your goals!</p> 
+            <a href="user_signup.html"><button class="btn btn-primary login_butn" id="login">Login</button></a> 
+        </div> 
+    </section>
 
-        <form action=""> 
-            <div class="login-form">
-                <div>
-                    <h1 style="text-align: center;">We are committed to <br> our customers and <br> being the bank <br> that you deserve.</h1>
-                </div>
-                <button type="submit" class="btn btn-primary login_butn"><a href="user_signup.html" >click
-                        here for sign in</a></button> 
-                <hr>
-                <p style="text-align: center;">Business Online Banking</p>
+    <section id="about">
+
+        <div class="pictures">
+            <div class="picture1">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                    alt="" class="images">
+                <p id="paragraph">Creating account is fast and easy</p>
             </div>
-
-        </form>
-
+            <div class="picture2">
+                <img src="https://images.unsplash.com/photo-1459499362902-55a20553e082?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80"
+                    alt="" class="images">
+                <p id="paragraph">We take care of you</p>
+            </div>
+            <div class="picture3">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                    alt="" class="images">
+                <p id="paragraph">No documents need</p>
+            </div>
+        </div>
+ 
+        <h2 class="products">Presenting products and services that are right for you</h2>
+        <div class="services">
+            <!-- <i class="fa fa-building"></i> -->
+            <fieldset>
+                <div>
+                    <h3>Personal Banking</h3>
+                    <p>Personal Checking</p>
+                    <p>Personal Savings</p>
+                    <p> Personal Mortgages</p>
+                    <p>Personal Loans</p>
+                    <p>Personal Banking</p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <h3>Business Banking</h3>
+                    <p>Business Checking</p>
+                    <p>Business Loans</p>
+                    <p>Small Business Administration</p>
+                    <p>Banking Additional Services</p>
+                    <p>E-Banking</p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <h3>Mobile Banking</h3>
+                    <p>Bill payments</p>
+                    <p>Loan payments</p>
+                    <p>Money transfers</p>
+                    <p>Transactions alerts</p>
+                    <p>Travel services</p>
+                </div>
+            </fieldset>
+        </div>
     </section>
 
-    <section>
-        <div></div>
-        <div></div>
-        <div></div>
+    <section id="contact">
+        <div class="connect_us">
+            <div class="socialmedia">
+                <h2>Connect with us</h2> 
+                <i class="fab fa-facebook-square fa-3x" id="facebook"> </i>
+                <i class="fab fa-twitter-square fa-3x" id="twitter"> </i> <br>
+                <i class="fab fa-google-plus-square fa-3x" id="google"> </i>
+                <i class="fab fa-instagram fa-3x" id="instagram"> </i>
+            </div>
+            <div class="contacts">
+                <h2>Get in touch:</h2>
+                <div class="findus">
+                    <i class="fas fa-phone-square-alt fa-3x"> <i id="description">0788306550</i></i> <br>
+                    <i class="fa fa-envelope fa-3x"><i id="description">papel@gmail.com</i></i> <br>
+                    <i class='fas fa-map-marker-alt fa-3x '><i id="description">Kigali, Rwanda</i></i><br>
+                </div>
+            </div>
+        </div>
     </section>
-
 
     <div class="footer">
-        <p>footer</p>
+        <footer>
+            <p id="footer_text">Copyright © 2020 Papel Inc. All Rights Reserved</p>
+        </footer>
     </div>
+
 </body>
 
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Account</title>
+    <link rel="stylesheet" type="text/css" href="../css/user_acc.css">
+</head>
+
+<body>
+    <div class="profileContainer">
+        <nav>
+            <a href="index.html">Logout</a>
+            <a href="index.html">Home</a>
+        </nav>
+
+        <table class="history">
+            <tr>
+                <th>
+                    <div class="imgcontainer">
+                        <img src="../images/s2.jpeg" alt="Avatar" class="avatar">
+                    </div>
+                </th>
+                <th class="profile">
+                   <h4>Names: <span>Kaliza Ange</span></h4>
+                   <h4>Account No: <span>325167</span></h4>
+                   <h4>Bank: <span>BK</span></h4>
+                </th>
+            </tr>
+        </table>
+        <hr>
+        <div>
+<h2 class="activity">Transaction Activities</h2>
+            <div class="services">
+                <!-- <i class="fa fa-building"></i> -->
+                <fieldset>
+                    <div>
+                        <h3>Date</h3>
+                        <p>6/9/2019</p>
+                        <p>3/2/2020</p>
+                        <p>5/12/2018</p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <h3>Activity</h3>
+                        <p>Credit</p>
+                        <p>Debit</p>
+                        <p>Debit</p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <h3>Account/rwf</h3>
+                        <p>50.000</p>
+                        <p>670.000</p>
+                        <p>45.0000</p>
+                    </div>
+                </fieldset>
+                <fieldset>  <br><br><br>
+                        <p class="view" onclick="document.getElementById('id01').style.display='block'"><u>View</u></p>
+                        <p class="view" onclick="document.getElementById('id01').style.display='block'"><u>View</u></p>
+                        <p class="view" onclick="document.getElementById('id01').style.display='block'"><u>View</u></p>
+                </fieldset>
+            </div>
+        </div>
+
+
+
+        <!-- Button to open the modal login form -->
+        
+
+        <!-- The Modal -->
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">&times;</span> 
+            <form class="modal-content animate" action=" ">
+
+
+                <div class="container">
+                        <h4>Date: <span>23/7/2019</span></h4>
+                        <h4>Activity: <span>Credit</span></h4> 
+                        <h4>Account No: <span>325167</span></h4>
+                        <h4>Cashier ID: <span>2</span></h4>
+                        <h4>Amount: <span>325.000</span></h4>
+                        <h4>Old balance: <span>500.000</span></h4>
+                        <h4>New balance: <span>250.000</span></h4>
+                </div> 
+            </form>
+        </div>
+
+        <div class="footer">
+                <footer>
+                    <p id="footer_text">Copyright © 2020 Papel Inc. All Rights Reserved</p>
+                </footer>
+            </div>
+        <script src="../js/user_acc.js"></script>
+</body>
+
+</html>

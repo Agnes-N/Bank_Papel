@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="../css/user_dashboard.css">
-    <script src=".../js/user_dashboard.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/user_dashboard.css"> 
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,48 +19,74 @@
             <a href="index.html">Home</a>
         </nav>
 
-        <!-- <button onclick="document.getElementById('id01').style.display='block'">Sign
-                Up</button>  -->
-        <!-- Button to open the modal -->
-
-
-        <!-- The Modal (contains the Sign Up form) -->
-        <div id="id01" class="modal">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                title="Close Modal">close</span>
-            <form class="modal-content" action=" ">
-                <div class="container">
-                    <h1 class="accountform">Please fill in this form to create a bank account.</h1>
-                    <!-- <p>Please fill in this form to create a bank account.</p> -->
+        <form class=" content" action=" ">
+            <div class="container tables">
+                    <h1 class="accountform">Please complete this form to create a bank account.</h1>
                     <hr>
-                    <label for="fname"><b>First Name</b></label>
-                    <input type="text" placeholder="Enter first name" name="fname" required>
+                
+                <table>
+                        
+                    <h2 class="headings">Personal Information</h2>
+                    <tr>
+                        <th><label for="fname"><b>First Name</b></label></th>
+                        <th><input type="text" placeholder="Enter first name" name="fname" required></th>
 
-                    <label for="lname"><b>Last Name</b></label>
-                    <input type="text" placeholder="Enter last name" name="fname" required>
+                    </tr>
+                    <tr>
+                        <td><label for="lname"><b>Last Name</b></label></td>
+                        <td><input type="text" placeholder="Enter last name" name="fname" required></td>
 
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
-  
-                    <label for="address"><b>Address</b></label>
-                    <input type="text" placeholder="Enter address" name="address" required>
-  
-                    <label for="occupation"><b>Occupation</b></label>
-                    <input type="text" placeholder="Enter occupation" name="occupation" required>
-  
-                    <label for="tel"><b>Phone number</b></label>
-                    <input type="tel" placeholder="Enter tel" name="tel" range required>
- 
-                    <div class="clearfix">
+                    </tr>
+                    <tr>
+                        <td><label for="gender"><b>Gender</b></label></td>
+                        <td><select id="gender" name="gender" form="genderform">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select></td>
+                    </tr>
+                </table>
 
-                        <button type="submit" class="submits" id="account">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+                <table>
+                    <h2 class="headings">Contact Information</h2>
+                    <tr>
+                        <td><label for="email"><b>Email</b></label></td>
+                        <td><input type="text" placeholder="Enter Email" name="email" required></td>
 
+                    </tr>
+                    <tr>
+                        <td><label for="tel"><b>Phone number</b></label></td>
+                        <td> <input type="tel" placeholder="Enter tel" name="tel" range required></td>
 
+                    </tr>
+                </table>
+                <table>
+                    <h2 class="headings">Account Details</h2>
+                    <tr>
+                        <td> <label for="accounttye"><b>Account type</b></label></td>
+                        <td> <select id="accounttype" name="accounttype" form="accountform">
+                                <option value="personal">Personal account</option>
+                                <option value="saving">Saving account</option>
+                            </select><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="currency"><b>Currency</b></label></td>
+                        <td> <select id="currency" name="currency" form="currencyform">
+                                <option value="rwf">Rwf</option>
+                                <option value="usd">USD</option>
+                            </select></td>
+                    </tr>
+
+                </table>
+                <button type="submit" class="submits" id="account">Submit</button>
+            </div>
+        </form>
     </section>
+
+    <div class="footer">
+            <footer>
+                <p id="footer_text">Copyright © 2020 Papel Inc. All Rights Reserved</p>
+            </footer>
+        </div>
 </body>
 
 </html>

@@ -1,3 +1,13 @@
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+
 const credit =()=>{
     const type1 = document.querySelector('.type1');
     const type = document.querySelector('.type2');

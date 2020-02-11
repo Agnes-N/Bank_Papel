@@ -7,58 +7,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cashier</title>
     <link rel="stylesheet" type="text/css" href="../css/cashier.css">
-    <link rel="stylesheet" type="text/css" href="../css/user_acc.css">
 
 </head>
 
 <body>
-    <div class="cashierform">
-        <nav>
-            <a href="index.html">Logout</a>
-            <a onclick="credit()" class="type2" id="credit">Credit</a>
-            <a onclick="debit()" class="type1" id="debit">Debit</a>
-            <a href="index.html">Home</a>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a onclick="debit()" class="type1" id="debit">Debit</a>
+        <a onclick="credit()" class="type2" id="credit">Credit</a>
+        <a href="index.html">Log out</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
-        </nav>
+    <div class="container"> 
+        <div class="Credits">
+            <form>
+                <table>
+                    <tr>
+                        <th><img src="../images/laptop1.jpeg" width="600" height="600" alt=""></th>
+                        <th>
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
-        <div class="container">
-            <h2>Papel is here for you</h2>
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
 
-            <div class="all">
-                <div class="viewDebit">
-                    <form action="">
-                        <p><b>Date:</b><span><label for="date"> <br>
-                                    <input type="date" name="date" id="date" class="text">
-                            </span></label></span></p> <br>
+                            <label for="acc">Account No</label>
+                            <input type="text" id="acc" name="firstname" placeholder="Enter account no.." required>
 
-                        <p><b>Transaction type:</b><span><label for="date">
-                                    <i>Debit</i>
-                                </label></span></p><br>
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount" name="amount" placeholder="Amount .." required>
 
-                        <p><b>Account No:</b><label for="account"><br>
-                                <input type="text" name="account" class="text" required placeholder="Account Number">
-                            </label></p><br>
+                            <label for="cashier">Cashier Names</label>
+                            <input type="text" id="cashier" name="cashier" placeholder="Cashier name .." required>
 
-                        <p><b>Cashier ID:</b><label for="cashier"><br>
-                                <input type="text" name="cashier" class="text" required placeholder="Cashier ID">
-                            </label></p><br>
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" placeholder="Date .." required>
 
-                        <p><b>Amount:</b><label for="account"><br>
-
-                                <input type="text" name="account" class="text" required placeholder="Amount"><br>
-                                <br><b>Currency:</b><br><select>
-                                    <option value="">Choose currency</option>
-                                    <option value="rwf">RWF</option>
-                                    <option value="usd">USD</option>
-                                </select>
-                            </label></p><br>
-
-                        <input type="button" value="Debit" id="debitBtn">
-                    </form>
-                </div>
- 
-            <script src="../js/cashier.js"></script>
-
-</body>
-
+                            <label for="Currency">Currency</label>
+                            <select id="Currency" name="Currency">
+                                <option value="rwf">Rwf</option>
+                                <option value="usd">USD</option>
+                            </select>
+                            <input type="button" value="Credit" id="creditbutton"></th>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div> 
+    <script src="../js/cashier.js"></script>
+</body> 
 </html>

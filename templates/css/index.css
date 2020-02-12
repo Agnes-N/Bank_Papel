@@ -134,11 +134,12 @@ margin-bottom: 5%;
 #footer { 
 height: 20px;
 margin: 0 auto;
-padding: 40px 0 15px 0;
+padding: 40px 4px 15px 0;
 }
 
 #footer p {
 margin: 0;
+margin-bottom: 2%;
 text-align: center;
 color: white;
 }

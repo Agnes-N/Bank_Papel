@@ -10,13 +10,10 @@
 </head>
 
 <body>
-    <div class="profileContainer">
         <div id="menu">
             <ul>
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="../../index.html">Log out</a></li>
-                <!-- <li class="first"><a href="templates/html/login.html">Log in</a></li>
-                <li class="last"><a href="templates/html/signup.html">Sign up</a></li> -->
             </ul>
         </div>
 
@@ -28,76 +25,55 @@
                     </div>
                 </th>
                 <th class="profile">
-                   <h4>Names: <span>Kaliza Ange</span></h4>
-                   <h4>Account No: <span>325167</span></h4>
-                   <h4>Bank: <span>BK</span></h4>
+                    <h4>Names: <span>Kaliza Ange</span></h4>
+                    <h4>Account No: <span>325167</span></h4>
+                    <h4>Bank: <span>BK</span></h4>
                 </th>
             </tr>
         </table>
         <hr>
+
         <div>
-<h2 class="activity">Transaction Activities</h2>
-            <div class="pictures"> 
-                <fieldset>
-                    <div>
-                        <h3>Date</h3>
-                        <p>6/9/2019</p>
-                        <p>3/2/2020</p>
-                        <p>5/12/2018</p>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <div>
-                        <h3>Activity</h3>
-                        <p>Credit</p>
-                        <p>Debit</p>
-                        <p>Debit</p>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <div>
-                        <h3>Account/rwf</h3>
-                        <p>50.000</p>
-                        <p>670.000</p>
-                        <p>45.0000</p>
-                    </div>
-                </fieldset>
-                <fieldset>  <br><br><br>
-                        <p class="view" onclick="document.getElementById('id01').style.display='block'"><u>View</u></p>
-                        <p class="view" onclick="document.getElementById('id01').style.display='block'"><u>View</u></p>
-                        <p class="view" onclick="document.getElementById('id01').style.display='block'"><u>View</u></p>
-                </fieldset>
+            <h2 class="heading">Transaction Activities</h2>
+        </div>
+        <div class="activities">
+            <div>
+                <h3>Date</h3>
+                <p>6/9/2019</p>
+                <p>3/2/2020</p>
+                <p>5/12/2018</p>
+            </div>
+
+            <div>
+                <h3>Activity</h3>
+                <p onclick="openForm()">Credit</p>
+                <p onclick="openForm()">Debit</p>
+                <p onclick="openForm()">Credit</p>
+            </div>
+
+            <div>
+                <h3>Account</h3>
+                <p>50.000</p>
+                <p>670.000</p>
+                <p>45.0000</p>
             </div>
         </div>
-
-
-
-        <!-- Button to open the modal login form -->
-        
-
-        <!-- The Modal -->
-        <div id="id01" class="modal">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                title="Close Modal">&times;</span> 
-            <form class="modal-content animate" action=" ">
-
-
-                <div class="container">
-                        <h4>Date: <span>23/7/2019</span></h4>
-                        <h4>Activity: <span>Credit</span></h4> 
-                        <h4>Account No: <span>325167</span></h4>
-                        <h4>Cashier ID: <span>2</span></h4>
-                        <h4>Amount: <span>325.000</span></h4>
-                        <h4>Old balance: <span>500.000</span></h4>
-                        <h4>New balance: <span>250.000</span></h4>
-                </div> 
-            </form>
+       <div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+                <h4>Date: <span>23/7/2019</span></h4>
+                <h4>Activity: <span>Credit</span></h4>
+                <h4>Account No: <span>325167</span></h4>
+                <h4>Cashier ID: <span>2</span></h4>
+                <h4>Amount: <span>325.000</span></h4>
+                <h4>Old balance: <span>500.000</span></h4>
+                <h4>New balance: <span>250.000</span></h4>
+           </form>
         </div>
 
-        <div id="footer">
-            <p>&copy; Papel. All rights reserved. </p>
-        </div>
-        <script src="../js/user_acc.js"></script>
+    <!-- <div id="footer">
+        <p>&copy; Papel. All rights reserved. </p>
+    </div> -->
+    <script src="../js/user_acc.js"></script>
 </body>
 
 </html>

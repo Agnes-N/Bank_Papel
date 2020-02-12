@@ -7,26 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="../css/user_dashboard.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/index.css"> 
+
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <section>
-        <nav>
-            <a href="#logout">Logout</a>
-            <a href="#history">Account history</a>
-            <a href="#home" onclick="document.getElementById('id01').style.display='block'">Create bank account</a>
-            <a href="index.html">Home</a>
-        </nav>
+        <div id="menu">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html">Log out</a></li>
+                <!-- <li class="first"><a href="templates/html/login.html">Log in</a></li>
+                <li class="last"><a href="templates/html/signup.html">Sign up</a></li> -->
+            </ul>
+        </div>
 
-        <form class=" content" action=" ">
-            <div class="container tables">
-                    <h1 class="accountform">Please complete this form to create a bank account.</h1>
+        <form class=" content" action="user_account.html">
+            <div class="container tables" style="background-color: white;">
+                    <h4 class="accountform">Please complete this form to create a bank account.</h4>
                     <hr>
                 
                 <table>
                         
-                    <h2 class="headings">Personal Information</h2>
+                    <!-- <h2 class="headings">Personal Information</h2> -->
                     <tr>
                         <th><label for="fname"><b>First Name</b></label></th>
                         <th><input type="text" placeholder="Enter first name" name="fname" required></th>
@@ -35,6 +39,12 @@
                     <tr>
                         <td><label for="lname"><b>Last Name</b></label></td>
                         <td><input type="text" placeholder="Enter last name" name="fname" required></td>
+
+                    </tr>
+
+                    <tr>
+                        <td><label for="occupation"><b>Occupation</b></label></td>
+                        <td><input type="text" placeholder="Enter your occupation" name="occupation" required></td>
 
                     </tr>
                     <tr>
@@ -47,7 +57,7 @@
                 </table>
 
                 <table>
-                    <h2 class="headings">Contact Information</h2>
+                    <!-- <h2 class="headings">Contact Information</h2> -->
                     <tr>
                         <td><label for="email"><b>Email</b></label></td>
                         <td><input type="text" placeholder="Enter Email" name="email" required></td>
@@ -58,9 +68,15 @@
                         <td> <input type="tel" placeholder="Enter tel" name="tel" range required></td>
 
                     </tr>
+
+                    <tr>
+                        <td><label for="date"><b>Date</b></label></td>
+                        <td> <input type="date" placeholder="Enter date" name="tel" range required></td>
+
+                    </tr>
                 </table>
                 <table>
-                    <h2 class="headings">Account Details</h2>
+                    <!-- <h2 class="headings">Account Details</h2> -->
                     <tr>
                         <td> <label for="accounttye"><b>Account type</b></label></td>
                         <td> <select id="accounttype" name="accounttype" form="accountform">
@@ -68,13 +84,7 @@
                                 <option value="saving">Saving account</option>
                             </select><br><br></td>
                     </tr>
-                    <tr>
-                        <td><label for="currency"><b>Currency</b></label></td>
-                        <td> <select id="currency" name="currency" form="currencyform">
-                                <option value="rwf">Rwf</option>
-                                <option value="usd">USD</option>
-                            </select></td>
-                    </tr>
+                     
 
                 </table>
                 <button type="submit" class="submits" id="account">Submit</button>
@@ -82,11 +92,9 @@
         </form>
     </section>
 
-    <div class="footer">
-            <footer>
-                <p id="footer_text">Copyright © 2020 Papel Inc. All Rights Reserved</p>
-            </footer>
-        </div>
+    <div id="footer">
+        <p>&copy; Papel. All rights reserved. </p>
+    </div> 
 </body>
 
 </html>

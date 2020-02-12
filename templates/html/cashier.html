@@ -12,51 +12,52 @@
 
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
-        <a onclick="debit()" class="type1" id="debit">Debit</a>
-        <a onclick="credit()" class="type2" id="credit">Credit</a>
-        <a href="index.html">Log out</a>
+        <a href="../../index.html" class="active">Home</a>
+        <!-- <a onclick="debit()" class="type1" id="debit">Debit</a>
+        <a onclick="credit()" class="type2" id="credit">Credit</a> -->
+        <a href="../../index.html">Log out</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
     </div>
 
     <div class="container"> 
-        <div class="Credits">
-            <form>
-                <table>
-                    <tr>
-                        <th><img src="../images/laptop1.jpeg" width="600" height="600" alt=""></th>
-                        <th>
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+            <!-- <div class="myaccount">
+                <img src="../images/log.jpeg" alt=""></th>
 
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+            </div> -->
+            <div>
+                <form>
 
-                            <label for="acc">Account No</label>
-                            <input type="text" id="acc" name="firstname" placeholder="Enter account no.." required>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
-                            <label for="amount">Amount</label>
-                            <input type="number" id="amount" name="amount" placeholder="Amount .." required>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
 
-                            <label for="cashier">Cashier Names</label>
-                            <input type="text" id="cashier" name="cashier" placeholder="Cashier name .." required>
+                    <label for="acc">Account No</label>
+                    <input type="text" id="acc" name="firstname" placeholder="Enter account no.." required>
 
-                            <label for="date">Date</label>
-                            <input type="date" id="date" name="date" placeholder="Date .." required>
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" name="amount" placeholder="Amount .." required>
 
-                            <label for="Currency">Currency</label>
-                            <select id="Currency" name="Currency">
-                                <option value="rwf">Rwf</option>
-                                <option value="usd">USD</option>
-                            </select>
-                            <input type="button" value="Credit" id="creditbutton"></th>
-                    </tr>
-                </table>
-            </form>
+                    <label for="cashier">Cashier Names</label>
+                    <input type="text" id="cashier" name="cashier" placeholder="Cashier name .." required>
+
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" placeholder="Date .." required>
+
+                    <label for="type">Transaction type</label>
+                    <select id="type" name="type">
+                        <option value="debit">Debit</option>
+                        <option value="credit">Credit</option>
+                    </select>
+                    <input type="button" value="submit" id="creditbutton"></th>
+
+                </form> 
         </div>
-    </div> 
+    </div>
     <script src="../js/cashier.js"></script>
-</body> 
+</body>
+
 </html>

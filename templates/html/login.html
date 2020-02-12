@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User login </title>
+    <link rel="stylesheet" type="text/css" href="../css/user_login.css">
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="tabs">
+            <p id="lt" class="tabs" onclick="loginTabFun()">login</p> 
+
+            <div id="clear"></div>
+        </div>
+
+        <div id="cont">
+            <div id="login" class="comm">
+                <input id="se" type="email" placeholder="Email" required />
+                <input id="sp" type="password" placeholder="Password" required />
+                <input type="submit" onclick="window.location = 'user_account.html';" value="Submit" />
+
+                <p onclick="forTabFun()">Forget Password?</p>
+            </div>
+ 
+            <div id="forgot" class="comm">
+                <h3>Forgot Password</h3>
+                <div>
+                    <input id="fe" type="email" placeholder="Email" required />
+                    <input type="submit" onclick="forgot()" value="Submit" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/user_login.js"></script>
+</body>
+
+</html>

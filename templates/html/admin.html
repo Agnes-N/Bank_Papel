@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Admin</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="../css/admin.css">
   <script src="https://kit.fontawesome.com/da7b84dcbd.js" crossorigin="anonymous"></script>
 
@@ -20,8 +24,6 @@
     </ul>
   </div>
 
-  <!-- <button class="delete" onclick="deleteRows()">Delete</button> -->
-
   <div style="overflow-x:auto;">
     <table id="table">
       <tr>
@@ -29,48 +31,76 @@
         <th>Account No</th>
         <th>Telephone</th>
         <th>Address</th>
-        <th>BAlance</th>
+        <th>Balance</th>
+        <th>Details</th>
+        <th>Delete</th>
+        <th>Activate<br> deactivate</th>
       </tr>
-      <tr id="myBtn">
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
-        <td>50</td>
-        <td>50</td>
+      <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+        <td><p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p></td>
+        <td><input type="checkbox" name="shouldDelete"></td>
+        <td><input type="button" id="activate" value="activate"></td>
        </tr>
-      <tr id="myBtn1">
+      <tr>
         <td>Eve</td>
         <td>Jackson</td>
         <td>94</td>
         <td>94</td>
         <td>94</td>
+        <td>
+          <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
+        </td>
         <td><input type="checkbox" name="shouldDelete"></td>
+        <td><input type="button" id="activate" value="activate"></td>
+        
       </tr>
-      <tr id="myBtn2">
+      <tr>
         <td>Adam</td>
         <td>Johnson</td>
         <td>67</td>
         <td>67</td>
         <td>67</td>
+        <td>
+          <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
+        </td>
         <td><input type="checkbox" name="shouldDelete"></td>
-     </tr>
+        <td><input type="button" id="activate" value="activate"></td>
+        
+      </tr>
     </table>
   </div>
   </div>
 
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h4>Date: <span>23/7/2019</span></h4>
-      <h4>Names: <span>Akaliza Ange</span></h4>
-      <h4>Account No: <span>325167</span></h4>
-      <h4>Telephone: <span>2</span></h4>
-      <h4>Address: <span>325.000</span></h4>
-      <h4>balance: <span>500.000</span></h4>
 
-    </div>
-
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+      title="Close Modal">&times;</span>
+    <form class="modal-content animate" action=" ">
+      <div class="container">
+        <h4>Date: <span>23/7/2019</span></h4>
+        <h4>Names: <span>Akaliza Ange</span></h4>
+        <h4>Account No: <span>325167</span></h4>
+        <h4>Telephone: <span>2</span></h4>
+        <h4>Address: <span>325.000</span></h4>
+        <h4>balance: <span>500.000</span></h4>
+      </div>
+    </form>
   </div>
+
+
+  <!-- <div class="cog">
+      <button class="button" id="active">Activate</button>
+      <button class="button" id="deactive">Deactivate</button>
+
+  </div> -->
+
+  
+
 
   <script src="../js/admin.js"></script>
 </body>

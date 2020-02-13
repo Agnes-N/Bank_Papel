@@ -75,10 +75,17 @@ select{
 
 button{
   margin-top:3%; 
-  width:200px;
+  margin-left:40%; 
   height:50px;
+  text-align: center;
   border: none; 
   background-color: #008080;
   border-radius: 20px;
 }
  
+.combine{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2,1fr);
+  padding: 10px;
+}

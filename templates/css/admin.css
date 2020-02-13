@@ -1,117 +1,125 @@
 body {
-    margin: 0%;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #menu {
-	background: #055657;
-	font-size: 20px;
-	height: 10vh;
+background: #055657;
+font-size: 20px;
+height: 10vh;
 }
 
 #menu ul {
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px;
-	list-style: none;
-	line-height: normal;
-	text-align: center;
+margin: 0px 0px 0px 0px;
+padding: 0px 0px;
+list-style: none;
+line-height: normal;
+text-align: center;
 }
 
 #menu li {
-	display: inline-block;
+display: inline-block;
 }
 
 #menu a {
-	display: block;
-	height: 70px;
-	padding: 0px 40px 0px 40px;
-	text-decoration: none;
-	line-height: 70px;
-	text-transform: uppercase;
-	text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-	font-weight: 200;
-	color: #FFFFFF;
-	border: none;
+display: block;
+height: 70px;
+padding: 0px 40px 0px 40px;
+text-decoration: none;
+line-height: 70px;
+text-transform: uppercase;
+text-align: center;
+font-size: 16px;
+cursor: pointer;
+font-weight: 200;
+color: #FFFFFF;
+border: none;
 }
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.4);
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  .close {
-    margin: 0%;
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    visibility: hidden;
-  }
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4);
+}
 
-  .trow:focus {
-    background-color: yellow;
-    width: 40px;
-    height: 30vh;
-  }
-  #delete{
-    padding: 10px 20px;
-    outline: none;
-    border: none;
-    background-color: aqua;
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
-  }
-  #delete:focus{
-    background-color: #055657;
-  }
+.close {
+  margin: 0%;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  visibility: hidden;
+}
 
-  table {
-    margin-top: 3%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-  }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even){background-color: #f2f2f2}
+table {
+  margin-top: 3%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
 
-/* button, .delete{ 
-    border: none;
-    outline: none;
-    height: 20px;
-    color: #eee;
-    font-size: 1.0rem;
-    background-color: #008080;
-    cursor: pointer;
-    padding: 20px;
-    margin: 12px 5px 12px 70px;
-    margin-left: 10%;
-    margin-left: 10%;
-  } */
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2} 
+
+.delbtn{
+padding: 10px 20px;
+height: 5vh;
+color: black;
+border-radius: 34px;
+}
 
 .view{
-  cursor: pointer;
+cursor: pointer;
+}
+
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+}
+
+input:checked + .slider {
+background-color: #055657;
+}
+
+.slider.round {
+border-radius: 34px;
 }
 

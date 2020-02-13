@@ -19,3 +19,23 @@ const loginFuction = () => {
     })
   }
   loginFuction();
+
+  var emailArray=[];
+  var passwordArray=[];
+  function forgot(){
+    event.preventDefault();
+
+    var email = document.getElementById("fe").value;
+
+    if(emailArray.indexOf(email) == -1){
+        if (email == ""){
+            alert("Email required.");
+            return ;
+        }
+        alert("Email does not exist.");
+        return ;
+    }
+
+    alert("email is send to your email check it out. \n Thanks");
+    document.getElementById("fe").value ="";
+}

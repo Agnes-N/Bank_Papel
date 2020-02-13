@@ -1,5 +1,4 @@
-
-  * {
+ * {
     box-sizing: border-box;
   }
   
@@ -21,24 +20,6 @@ body {
     display: inline-block;
   }
   
-  input[type=button] { 
-    margin-top:3%; 
-    margin-left:40%; 
-    padding: 20px 40px;
-    font-size: 1.0rem;
-    color: white;
-    height:50px;
-    text-align: center;
-    border: none; 
-    background-color: #008080;
-    border-radius: 20px;
-}
-  
-  input[type=button]:hover {
-    background-color: #008080;
-    
-  }
-  
   .container {
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -58,15 +39,13 @@ body {
     margin-top: 6px;
   }
   
-  /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
+
+@media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
       width: 100%;
       margin-top: 0;
@@ -81,13 +60,16 @@ body {
   }
 
 
-/* button{
-  margin-top:3%; 
-  margin-left:40%; 
-  height:50px;
-  text-align: center;
-  border: none; 
-  background-color: #008080;
-  border-radius: 20px;
-} */
+button{
+    margin-top:3%; 
+    float: left;
+    width: 20%;
+    font-size: 1.0rem;
+    color: white;
+    height:50px;
+    text-align: center;
+    border: none; 
+    background-color: #008080;
+    border-radius: 20px;
+}
  

@@ -2,69 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin</title>
-    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin</title>
+  <link rel="stylesheet" type="text/css" href="../css/admin.css">
+  <script src="https://kit.fontawesome.com/da7b84dcbd.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <div id="menu">
-        <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../index.html">Log out</a></li>
-        </ul>
+  <div id="menu">
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a onclick='deleteRows()'>Delete</a></li>
+      <li><a href="../../index.html">Log out</a></li>
+    </ul>
+  </div>
+
+  <!-- <button class="delete" onclick="deleteRows()">Delete</button> -->
+
+  <div style="overflow-x:auto;">
+    <table id="table">
+      <tr>
+        <th>Names</th>
+        <th>Account No</th>
+        <th>Telephone</th>
+        <th>Address</th>
+        <th>BAlance</th>
+      </tr>
+      <tr id="myBtn">
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+       </tr>
+      <tr id="myBtn1">
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td><input type="checkbox" name="shouldDelete"></td>
+      </tr>
+      <tr id="myBtn2">
+        <td>Adam</td>
+        <td>Johnson</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td><input type="checkbox" name="shouldDelete"></td>
+     </tr>
+    </table>
+  </div>
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h4>Date: <span>23/7/2019</span></h4>
+      <h4>Names: <span>Akaliza Ange</span></h4>
+      <h4>Account No: <span>325167</span></h4>
+      <h4>Telephone: <span>2</span></h4>
+      <h4>Address: <span>325.000</span></h4>
+      <h4>balance: <span>500.000</span></h4>
+
     </div>
 
-    <div class="useraccounts">
-        <div>
-            <h2>Names</h2>
-            <p id="myBtn">Akaliza Ange</p>
-            <p id="myBtn">Gato Claude </p>
-        </div>
+  </div>
 
-        <div>
-            <h2>Account No</h2>
-            <p id="myBtn">542658</p>
-            <p id="myBtn">112154</p>
-        </div>
-
-        <div>
-            <h2>Telephone</h2>
-            <p id="myBtn">078854120</p>
-            <p id="myBtn">078441236</p>
-        </div>
-        <div>
-            <h2>Address</h2>
-            <p id="myBtn">Kigali</p>
-            <p id="myBtn">Kibuye</p>
-        </div>
-        <div>
-            <h2>Balance</h2>
-            <p id="myBtn">500.000</p>
-            <p id="myBtn">320.000</p>
-        </div>
-    </div>
-    </div>
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h4>Date: <span>23/7/2019</span></h4>
-            <h4>Names: <span>Akaliza Ange</span></h4>
-            <h4>Account No: <span>325167</span></h4>
-            <h4>Telephone: <span>2</span></h4>
-            <h4>Address: <span>325.000</span></h4>
-            <h4>balance: <span>500.000</span></h4>
-
-        </div>
-
-    </div>
-
-    <script src="../js/admin.js"></script>
+  <script src="../js/admin.js"></script>
 </body>
 
 </html>

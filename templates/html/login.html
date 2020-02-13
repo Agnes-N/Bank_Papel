@@ -12,29 +12,16 @@
 
 <body>
     <div id="container">
-        <div id="tabs">
-            <p id="lt" class="tabs" onclick="loginTabFun()">login</p> 
-
-            <div id="clear"></div>
-        </div>
-
-        <div id="cont">
+        <h1 style="color: white; margin-top: -10%; margin-bottom: 5%; text-align: center;">Login in</h1>
+        <form id="login" action="user_account.html">
             <div id="login" class="comm">
-                <input id="se" type="email" placeholder="Email" required />
-                <input id="sp" type="password" placeholder="Password" required />
-                <input type="submit" onclick="window.location = 'user_account.html';" value="Submit" />
+                <input id="email" type="email" placeholder="Email" required />
+                <input id="password" type="password" placeholder="Password" required />
+                <a href="../html/user_account.html"><input type="submit" id="submit" class="submit" value="Submit"/></a>
 
-                <p onclick="forTabFun()">Forget Password?</p>
+                <p onclick="window.location = 'forgot.html';">Forget Password?</p>
             </div>
- 
-            <div id="forgot" class="comm">
-                <h3>Forgot Password</h3>
-                <div>
-                    <input id="fe" type="email" placeholder="Email" required />
-                    <input type="submit" onclick="forgot()" value="Submit" />
-                </div>
-            </div>
-        </div>
+        </form>
     </div>
     <script src="../js/user_login.js"></script>
 </body>

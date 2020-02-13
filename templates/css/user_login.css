@@ -18,20 +18,6 @@ body {
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.5);
 }
-.tabs { 
-  width: 30%; 
-  padding: 10px;
-  float: left;
-  text-align: center;
-  vertical-align: middle; 
-  border-bottom: 0px;
-  position: relative;
-  font-size: 1.3em;
-  color: #ffffff;
-}
-.tabs:hover, p{
-  cursor: pointer;
-}
 
 #lt {
   background-color: transparent;
@@ -54,14 +40,14 @@ input{
   margin: 10px 13px;
   padding: 10px;
   font-size: 1.3em;
-  background-color: transparent;
+  background-color: white;
   outline: none; 
   border-bottom: 1px solid #fff;
 }
 
 ::placeholder
 {
-  color: #eee;
+  color: black;
 }
 
 input[type="submit"] { 

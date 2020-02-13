@@ -7,56 +7,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cashier</title>
     <link rel="stylesheet" type="text/css" href="../css/cashier.css">
-
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
 </head>
 
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="../../index.html" class="active">Home</a>
-        <!-- <a onclick="debit()" class="type1" id="debit">Debit</a>
-        <a onclick="credit()" class="type2" id="credit">Credit</a> -->
-        <a href="../../index.html">Log out</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+        <div id="menu">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html">Log out</a></li>
+                </ul>
+            </div>
 
-    <div class="container"> 
-            <!-- <div class="myaccount">
-                <img src="../images/log.jpeg" alt=""></th>
+    <div class="container">
+        <form class="combine">
 
-            </div> -->
             <div>
-                <form>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
 
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                <label for="acc">Account No</label>
+                <input type="text" id="acc" name="firstname" placeholder="Enter account no.." required>
 
-                    <label for="acc">Account No</label>
-                    <input type="text" id="acc" name="firstname" placeholder="Enter account no.." required>
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" placeholder="Amount .." required>
 
-                    <label for="amount">Amount</label>
-                    <input type="number" id="amount" name="amount" placeholder="Amount .." required>
+            </div>
+            <div>
+                <label for="amount">Telephone</label>
+                <input type="number" id="amount" name="amount" placeholder="Tel .." required>
 
-                    <label for="cashier">Cashier Names</label>
-                    <input type="text" id="cashier" name="cashier" placeholder="Cashier name .." required>
+                <label for="cashier">Cashier Names</label>
+                <input type="text" id="cashier" name="cashier" placeholder="Cashier name .." required>
 
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" placeholder="Date .." required>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" placeholder="Date .." required>
 
-                    <label for="type">Transaction type</label>
-                    <select id="type" name="type">
-                        <option value="debit">Debit</option>
-                        <option value="credit">Credit</option>
-                    </select>
-                    <input type="button" value="submit" id="creditbutton"></th>
+                <label for="type">Transaction type</label>
+                <select id="type" name="type">
+                    <option value="debit">Debit</option>
+                    <option value="credit">Credit</option>
+                </select>
+            </div>
+            </th>
 
-                </form> 
-        </div>
+        </form>
+        <input type="button" value="submit" id="creditbutton">
+
     </div>
+
+    <div id="footer">
+        <p>&copy; Papel. All rights reserved. </p>
+    </div>
+
     <script src="../js/cashier.js"></script>
 </body>
 

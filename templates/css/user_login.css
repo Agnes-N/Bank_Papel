@@ -50,7 +50,7 @@ input{
   color: black;
 }
 
-input[type="submit"] { 
+input[type="submit"]{ 
   border: none;
   outline: none;
   height: 40px;
@@ -59,8 +59,27 @@ input[type="submit"] {
   background-color: #008080;
   cursor: pointer;
   border-radius: 20px;
-  width: 200px; 
-  margin-left: 10%;
+  width: 100px; 
+  margin-left:8%;
+}
+
+.cancelbtn{
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #eee;
+  font-size: 16px;
+  background-color: #008080;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 100px; 
+  margin-left:8%;
+  text-decoration: none;
+}
+
+.cancelbtn, a{
+  color: #eee;
+  text-decoration: none;
 }
 
 #clear {

@@ -115,8 +115,9 @@ font-size: 2.5em;
 }
 
 #paragraph{
-text-align: center;
+	margin-left: 2%;
 }
+
 p{
 font-size: 1.4em;
 } 

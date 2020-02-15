@@ -5,64 +5,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cashier</title>
+    <title>Staff</title>
     <link rel="stylesheet" type="text/css" href="../css/cashier.css">
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
 </head>
 
 <body>
-        <div id="menu">
-                <ul>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="../../index.html">Log out</a></li>
-                </ul>
+
+    <div class="sidenav">
+        <a href="../../index.html">Home</a>
+        <a href="../../index.html">About</a>
+        <a id="myBtn">Activity</a>
+        <a href="../../index.html">Log out</a>
+    </div>
+
+
+    <div class="main">
+
+        <table>
+            <h2 id="dashboard">Staff Dashboard</h2>
+            <hr> <br>
+            <thead>
+                <tr>
+                    <th>Names</th>
+                    <th>Account No</th>
+                    <th>Telephone</th>
+                    <th>Address</th>
+                    <th>Balance</th>
+                    <th>Details</th>
+                    <th>Delete</th>
+                    <th>Activate<br> deactivate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>
+                        <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
+                    </td>
+                    <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn"
+                                onclick='deleteRows()'>Delete</button></span></td>
+                    <td><label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label></td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                    <td>94</td>
+                    <td>94</td>
+                    <td>
+                        <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
+                    </td>
+                    <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn"
+                                onclick='deleteRows()'>Delete</button></span></td>
+                    <td><label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label></td>
+                </tr>
+                <tr>
+                    <td>Adam</td>
+                    <td>Johnson</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>
+                        <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
+                    </td>
+                    <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn"
+                                onclick='deleteRows()'>Delete</button></span></td>
+                    <td><label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label></td>
+                </tr>
+
+                <tr>
+                    <td>Zori</td>
+                    <td>Mercy</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>
+                        <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
+                    </td>
+                    <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn"
+                                onclick='deleteRows()'>Delete</button></span></td>
+                    <td><label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="id01" class="mymodal">
+
+        <form class="mymodal-content animate" action="">
+
+            <div class="containers">
+                <span onclick="document.getElementById('id01').style.display='none'" class="closes"
+                    title="Close Modal">&times;</span>
+
+                <h4>Date: <span>23/7/2019</span></h4>
+                <h4>Names: <span>Akaliza Ange</span></h4>
+                <h4>Account No: <span>325167</span></h4>
+                <h4>Telephone: <span>2</span></h4>
+                <h4>Address: <span>325.000</span></h4>
+                <h4>balance: <span>500.000</span></h4>
             </div>
-
-    <div class="container">
-        <form class="combine">
-
-            <div>
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-
-                <label for="acc">Account No</label>
-                <input type="text" id="acc" name="firstname" placeholder="Enter account no.." required>
-
-                <label for="amount">Amount</label>
-                <input type="number" id="amount" name="amount" placeholder="Amount .." required>
-
-            </div>
-            <div>
-                <label for="amount">Telephone</label>
-                <input type="number" id="amount" name="amount" placeholder="Tel .." required>
-
-                <label for="cashier">Cashier Names</label>
-                <input type="text" id="cashier" name="cashier" placeholder="Cashier name .." required>
-
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date" placeholder="Date .." required>
-
-                <label for="type">Transaction type</label>
-                <select id="type" name="type">
-                    <option value="debit">Debit</option>
-                    <option value="credit">Credit</option>
-                </select>
-            </div>
-            </th>
-
         </form>
-        <input type="button" value="submit" id="creditbutton">
+    </div>
+
+
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="text-align: center;">Debit/Credit</h2>
+            <div class="container">
+
+                <form class="" action="../html/admin.html">
+
+                    <label for="acc">Account No</label>
+                    <input type="number" id="acc" name="account" placeholder="Enter account no.." required>
+
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" name="amount" placeholder="Amount .." required>
+
+                    <label for="type">Transaction type</label>
+                    <select id="type" name="type">
+                        <option value="debit">Debit</option>
+                        <option value="credit">Credit</option>
+                    </select>
+
+                    <button type="submit" value="Submit" class="submits">Submit</button>
+
+                </form>
+
+            </div>
+        </div>
 
     </div>
 
-    <div id="footer">
-        <p>&copy; Papel. All rights reserved. </p>
-    </div>
-
-    <script src="../js/cashier.js"></script>
+    <script src="../js/admin.js"></script>
 </body>
 
 </html>

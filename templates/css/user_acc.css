@@ -1,75 +1,191 @@
-body {
-    margin: 0%;
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-#menu {
-	background: #055657;
-	font-size: 20px;
-	height: 10vh;
+html, body {
+	margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
-#menu ul {
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px;
-	list-style: none;
-	line-height: normal;
-	text-align: center;
-}
-
-#menu li {
-	display: inline-block;
-}
-
-#menu a {
-	display: block;
-	height: 70px;
-	padding: 0px 40px 0px 40px;
-	text-decoration: none;
-	line-height: 70px;
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 16px;
-	font-weight: 200;
-	color: #FFFFFF;
-	border: none;
-}
- 
-img.avatar {
-  width: 40%; 
-}
-
-.activities{  
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(4,1fr);
-  margin-left: 12%;
-} 
-
-.heading{
-  text-align: center;
-}
- 
-p {  
-  cursor: pointer;
-  opacity: 0.8;
-} 
-
-.form-popup {
-  display: none;
-  bottom: 0;
-  z-index: 9;
-}
-
-.form-container {
-  padding: 10px;
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0 22px 0;
-  border: none;
-  outline: none;
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
   background-color: #055657;
+  overflow-x: hidden;
+  padding-top: 40px;
+}
+
+#dashboard{
+  font-family: 'Lemonada', cursive;
+  color: #eee;
+  text-align: center;
+  background-color: #055657;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
   color: white;
-  cursor: pointer;
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: 'Lemonada', cursive;
   opacity: 0.8;
+  cursor: pointer;
+}
+
+.main {
+  margin-left: 160px;
+  font-size: 28px; 
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* On screens that are less than 700px wide*/
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px*/
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.containers {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.mymodal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.mymodal-content {
+  margin: auto;
+  padding: 20px;
+  width: 30%;
+}
+
+.view{
+  cursor: pointer;
+  }
+
+.closes {
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+table { 
+	width: 100%; 
+	border-collapse: collapse; 
+	}
+
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #055657; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table h2{ 
+	  	width: 100%; 
+	}
+
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		content: attr(data-column);
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+
+img.avatar {
+  /* vertical-align: middle; */
+  margin-left: 10%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile{
+  margin-left: -30%;
+}
+
+.history{
+  display: grid;
+  /* grid-gap: 5px; */
+  grid-template-columns: repeat(2,1fr);
+  font-size: 1rem;
 }

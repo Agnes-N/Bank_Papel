@@ -11,71 +11,99 @@
 </head>
 
 <body>
-  <div id="menu">
-    <ul>
-      <li><a href="../../index.html">Home</a></li>
-       <li><a href="../html/createad.html">Craete account</a></li>
-      <li><a href="../../index.html">Log out</a></li>
-    </ul>
+
+  <div class="sidenav">
+    <a href="../../index.html">Home</a>
+    <a href="../../index.html">About</a>
+    <a id="myBtn">Account</a>
+    <a href="../../index.html">Log out</a>
   </div>
 
-  <div style="overflow-x:auto;">
-    <table id="table">
-      <tr>
-        <th>Names</th>
-        <th>Account No</th>
-        <th>Telephone</th>
-        <th>Address</th>
-        <th>Balance</th>
-        <th>Details</th>
-        <th>Delete</th>
-        <th>Activate<br> deactivate</th>
-      </tr>
-      <tr>
+  <div class="main">
+
+    <table>
+      <h2 id="dashboard">Admin Dashboard</h2>
+      <hr> <br>
+      <thead>
+        <tr>
+          <th>Names</th>
+          <th>Account No</th>
+          <th>Telephone</th>
+          <th>Address</th>
+          <th>Balance</th>
+          <th>Details</th>
+          <th>Delete</th>
+          <th>Activate<br> deactivate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
           <td>Jill</td>
           <td>Smith</td>
           <td>50</td>
           <td>50</td>
           <td>50</td>
-        <td><p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p></td>
-        <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn" onclick='deleteRows()'>Delete</button></span></td>
-        <td><label class="switch">
-          <input type="checkbox" checked>
-          <span class="slider round"></span>
-        </label></td>
-       </tr>
-      <tr>
-        <td>Eve</td>
-        <td>Jackson</td>
-        <td>94</td>
-        <td>94</td>
-        <td>94</td>
-        <td>
-          <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
-        </td>
-        <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn" onclick='deleteRows()'>Delete</button></span></td>
-        <td><label class="switch">
-          <input type="checkbox" checked>
-          <span class="slider round"></span>
-        </label></td>
-      </tr>
-      <tr>
-        <td>Adam</td>
-        <td>Johnson</td>
-        <td>67</td>
-        <td>67</td>
-        <td>67</td>
-        <td>
-          <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
-        </td>
-        <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn" onclick='deleteRows()'>Delete</button></span></td>
-        <td><label class="switch">
-          <input type="checkbox" checked>
-          <span class="slider round"></span>
-        </label></td>
-      </tr>
+          <td>
+            <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
+          </td>
+          <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn"
+                onclick='deleteRows()'>Delete</button></span></td>
+          <td><label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label></td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>
+            <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
+          </td>
+          <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn"
+                onclick='deleteRows()'>Delete</button></span></td>
+          <td><label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label></td>
+        </tr>
+        <tr>
+          <td>Adam</td>
+          <td>Johnson</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>
+            <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
+          </td>
+          <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn"
+                onclick='deleteRows()'>Delete</button></span></td>
+          <td><label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label></td>
+        </tr>
+
+        <tr>
+          <td>Zori</td>
+          <td>Mercy</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>
+            <p class="view" onclick="document.getElementById('id01').style.display='block'"><b>View</b></p>
+          </td>
+          <td><input type="checkbox" name="shouldDelete"><span><button value="delete" class="delbtn"
+                onclick='deleteRows()'>Delete</button></span></td>
+          <td><label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label></td>
+        </tr>
+      </tbody>
     </table>
-  </div>
   </div>
 
 
@@ -92,6 +120,52 @@
         <h4>balance: <span>500.000</span></h4>
       </div>
     </form>
+  </div>
+
+
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <div class="container">
+
+        <h2 style="text-align: center;">Fill this form to create staff account</h2>
+        <form class="combine" action="../html/admin.html">
+          <div>
+            <label for="fname">Names</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+            <label for="acc">Account No</label>
+            <input type="text" id="acc" name="firstname" placeholder="Enter account no.." required>
+
+            <label for="type">Gender</label>
+            <select id="type" name="type">
+              <option value="male">male</option>
+              <option value="female">female</option>
+            </select>
+          </div>
+          <div>
+            <label for="amount">Telephone</label>
+            <input type="number" id="tel" name="tel" placeholder="Tel .." required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" placeholder="Date .." required>
+
+            <label for="type">Occupation</label>
+            <select id="type" name="type">
+              <option value="debit">Admin</option>
+              <option value="credit">Cashier</option>
+            </select>
+          </div>
+          <button type="submit" value="Submit" class="submits">Submit</button>
+
+        </form>
+
+
+      </div>
+    </div>
+
   </div>
 
   <script src="../js/admin.js"></script>

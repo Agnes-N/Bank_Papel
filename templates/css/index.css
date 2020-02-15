@@ -115,7 +115,7 @@ font-size: 2.5em;
 }
 
 #paragraph{
-	margin-left: 2%;
+	margin-left: 10%;
 }
 
 p{
@@ -151,3 +151,9 @@ color: white;
 grid-template-columns: repeat(1,1fr);
 }
 }
+
+@media screen and (max-width: 600px) {
+	div, h1, #header1 {
+	  font-size: 10px;
+	}
+  }  

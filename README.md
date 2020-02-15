@@ -1,12 +1,14 @@
 # Bank_Papel
+
 Papel is a light-weight core banking application that powers banking operations like account creation, customer deposits, and withdrawals. 
 
 This app is meant to support a single bank, where users can signup and create bank accounts online, but must visit the branch to withdraw or deposit money.
 
 ## Live link
+
 You can find this application [here](https://agnes-n.github.io/Bank_Papel/)
 
-## Alert
+## Notice
 
 Administrator email and password:
 

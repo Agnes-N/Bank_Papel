@@ -53,6 +53,6 @@ This application was managed using [Pivot tracker](https://www.pivotaltracker.co
 
 [Agnes Nyiramisigaro](https://github.com/Agnes-N)
 
-## Acknowlegment
+## Acknowledgment
 
 [Andela Rwanda](https://andela.com/)

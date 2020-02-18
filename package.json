@@ -4,9 +4,11 @@
   "description": "Papel is a light-weight core banking application that powers banking operations like account creation, customer deposits, and withdrawals.",
   "main": "server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run makeTest && nyc --reporter=html --reporter=text mocha --require @babel/register --timeout 10000 server/tests/ --exit",
     "start": "node server/app.js",
-    "dev":"nodemon server/app.js"
+    "dev": "npm run tableCreator && nodemon --exec babel-node server/app.js",
+    "tableCreator": "babel-node ./server/models/userModel.js",
+    "makeTest": "babel-node ./server/models/testTables.js"
   },
   "repository": {
     "type": "git",

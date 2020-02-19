@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npm run makeTest && nyc --reporter=html --reporter=text mocha --require @babel/register --timeout 10000 server/tests/ --exit",
     "start": "node server/app.js",
-    "dev": "npm run tableCreator && nodemon --exec babel-node server/app.js",
-    "tableCreator": "babel-node ./server/models/userModel.js",
+    "dev": "npm run createTable && nodemon --exec babel-node server/app.js",
+    "createTable": "babel-node ./server/models/tables.js",
     "makeTest": "babel-node ./server/models/testTables.js"
   },
   "repository": {

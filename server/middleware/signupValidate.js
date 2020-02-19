@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-const signup_valid = (req, res, next) => {
+const validateSignup = (req, res, next) => {
   const schema = {
     email: Joi.string().email({ minDomainSegments: 2 }).required(),
     firstName: Joi.string().alphanum().min(3).max(30).required(),
@@ -24,4 +24,4 @@ const signup_valid = (req, res, next) => {
   }
   next();
 };
-export default signup_valid;
+export default validateSignup;

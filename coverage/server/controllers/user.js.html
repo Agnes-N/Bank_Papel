@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/15</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/8</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.14% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/14</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -103,14 +103,17 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -119,24 +122,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -156,45 +158,46 @@ import '@babel/polyfill';
 import '@babel/plugin-transform-regenerator';
 &nbsp;
 &nbsp;
-const signup = <span class="missing-if-branch" title="if path not taken" >I</span><span class="branch-4 cbranch-no" title="branch not covered" ><span class="branch-3 cbranch-no" title="branch not covered" ><span class="branch-2 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >async (r</span></span></span>eq, res) =&gt; {</span>
-  const emailExist = `SELECT * FROM users WHERE email = '${req.body.email}';`;
+const Users = {
+  async signup(req, res) {
+    const emailExist = `SELECT * FROM users WHERE email = '${req.body.email}';`;
+    const { rows: [foundEmail] } = await pool.query(emailExist);
 &nbsp;
-  if (emailExist) {
-    return res.status(409).send({
-      status: 409,
-      error: 'Email already exists',
-    });
-  }
-  const <span class="cstat-no" title="statement not covered" >newUser = {</span>
-    email: req.body.email,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    password: await bcrypt.hash(req.body.password, 10),
+    if (foundEmail) {
+      return res.status(409).send({
+        status: 409,
+        error: 'Email already exists',
+      });
+    }
+    const newUser = {
+      email: req.body.email,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      password: await bcrypt.hash(req.body.password, 10),
+    };
 &nbsp;
-&nbsp;
-  };
-<span class="cstat-no" title="statement not covered" >  console.</span>log(newUser.password);
-&nbsp;
-  const <span class="cstat-no" title="statement not covered" >userInsert = `INSERT INTO users (email, firstName, lastName, password) VALUES('${newUser.email}','${newUser.firstName}','${newUser.lastName}','${newUser.password}') RETURNING *;`;</span>
-  const { rows: [<span class="cstat-no" title="statement not covered" >userGet] } = await pool.query(userInsert);</span>
-  const <span class="cstat-no" title="statement not covered" >token = jwt.sign({</span>
-    id: userGet.id,
-    email: userGet.email,
-  }, 'jwtprivatekey');
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  res.</span>status(201).send({
-    status: 201,
-    data: {
-      token,
+    const userInsert = `INSERT INTO users (email, firstName, lastName, password) VALUES('${newUser.email}','${newUser.firstName}','${newUser.lastName}','${newUser.password}') RETURNING *;`;
+    const { rows: [userGet] } = await pool.query(userInsert);
+    const token = jwt.sign({
       id: userGet.id,
-      firstName: userGet.firstname,
-      lastName: userGet.lastname,
       email: userGet.email,
-    },
-  });
+    }, 'jwtprivatekey');
+&nbsp;
+    res.status(201).send({
+      status: 201,
+      data: {
+        token,
+        id: userGet.id,
+        firstName: userGet.firstname,
+        lastName: userGet.lastname,
+        email: userGet.email,
+      },
+    });
+  },
 };
 &nbsp;
-export default signup;
+&nbsp;
+export default Users;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -202,7 +205,7 @@ export default signup;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Feb 18 2020 15:44:45 GMT+0200 (Central Africa Time)
+                at Wed Feb 19 2020 17:07:09 GMT+0200 (Central Africa Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

@@ -9,7 +9,7 @@ chai.should();
 chai.use(chaiHttp);
 
 describe('test signup', () => {
-  it('should signup a user', (done) => {
+  it('user should signup', (done) => {
     chai.request(app)
       .post('/auth/signup')
       .send(users[0])
@@ -19,17 +19,18 @@ describe('test signup', () => {
       });
   });
 
+
   it('email already exists', (done) => {
     chai.request(app)
       .post('/auth/signup')
       .send(users[1])
       .end((err, res) => {
-        expect(res).to.have.status(400);
+        expect(res).to.have.status(409);
         done();
       });
   });
 
-  it('should not be empty, enter your email', (done) => {
+  it('email should not be empty, enter your email', (done) => {
     chai.request(app)
       .post('/auth/signup')
       .send(users[2])
@@ -39,7 +40,7 @@ describe('test signup', () => {
       });
   });
 
-  it('could not signup, you should enter a valid email', (done) => {
+  it('email is not valid email', (done) => {
     chai.request(app)
       .post('/auth/signup')
       .send(users[3])
@@ -49,7 +50,7 @@ describe('test signup', () => {
       });
   });
 
-  it('could not signup, name must contain alpha numeric characters', (done) => {
+  it('name must contain alpha-numeric characters only', (done) => {
     chai.request(app)
       .post('/auth/signup')
       .send(users[4])
@@ -58,8 +59,7 @@ describe('test signup', () => {
         done();
       });
   });
-
-  it('could not signup, you shoud enter your password', (done) => {
+  it('password should not be empty, enter the password', (done) => {
     chai.request(app)
       .post('/auth/signup')
       .send(users[5])

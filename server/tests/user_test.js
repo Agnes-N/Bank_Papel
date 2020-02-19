@@ -69,3 +69,51 @@ describe('test signup', () => {
       });
   });
 });
+
+describe('Test login', () => {
+  it('user should login', (done) => {
+    chai.request(app)
+      .post('/auth/login')
+      .send(users[6])
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        done();
+      });
+  });
+  it('email is not valid', (done) => {
+    chai.request(app)
+      .post('/auth/login')
+      .send(users[7])
+      .end((err, res) => {
+        expect(res).to.have.status(400);
+        done();
+      });
+  });
+  it('email should not be empty', (done) => {
+    chai.request(app)
+      .post('/auth/login')
+      .send(users[8])
+      .end((err, res) => {
+        expect(res).to.have.status(400);
+        done();
+      });
+  });
+  it('password should not be empty', (done) => {
+    chai.request(app)
+      .post('/auth/login')
+      .send(users[9])
+      .end((err, res) => {
+        expect(res).to.have.status(400);
+        done();
+      });
+  });
+  it('email not found', (done) => {
+    chai.request(app)
+      .post('/auth/login')
+      .send(users[10])
+      .end((err, res) => {
+        expect(res).to.have.status(404);
+        done();
+      });
+  });
+});

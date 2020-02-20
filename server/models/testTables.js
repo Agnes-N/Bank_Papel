@@ -21,7 +21,9 @@ CREATE TABLE IF NOT EXISTS account(
   type VARCHAR(100) NOT NULL,
   status VARCHAR(100) NOT NULL DEFAULT 'DRAFT',
   balance FLOAT DEFAULT 0.00
-);`;
+);
+
+INSERT INTO users (email, firstname,lastname,password,type,is_admin) VALUES ('agnes@gmail.com','agnes','reina','$2b$10$8skfDzkgRSkUB64YPtFvGOc3P8Viug8XgIRTvujRBm7eH14ILnZhy','admin','true')`;
 
 const createTables = async () => {
   await pool.query(users).then(() => {

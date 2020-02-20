@@ -41,6 +41,44 @@ const Users = {
       },
     });
   },
+
+  async login(req, res) {
+    const emailExist = `SELECT * FROM users WHERE email = '${req.body.email}';`;
+    const { rows: [foundEmail] } = await pool.query(emailExist);
+
+    if (!foundEmail) {
+      return res.status(404).send({
+        status: 404,
+        error: 'Email does not exists',
+      });
+    }
+
+    const userLogin = {
+      email: req.body.email,
+      password: req.body.password,
+    };
+
+    const getUser = `SELECT * FROM users WHERE email = '${userLogin.email}';`;
+    const { rows: [gotUser] } = await pool.query(getUser);
+    const token = jwt.sign({
+      id: gotUser.id,
+      email: gotUser.email,
+      type: gotUser.type,
+      is_admin: gotUser.is_admin,
+    }, 'jwtprivatekey');
+
+    res.status(200).send({
+      status: 200,
+      data: {
+        token,
+        id: gotUser.id,
+        firstName: gotUser.firstname,
+        lastName: gotUser.lastname,
+        email: gotUser.email,
+      },
+    });
+  },
+
 };
 
 

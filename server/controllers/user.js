@@ -79,6 +79,42 @@ const Users = {
     });
   },
 
+  async create_account(req, res) {
+    const userAccount = {
+      createdOn: req.body.date,
+      firstName: req.Data.firstName,
+      lastName: req.Data.lastName,
+      type: req.body.type,
+    };
+
+    let owner = `${userAccount.firstName} ${userAccount.lastName}`;
+    let { email } = req.Data;
+
+    if (userAccount.type !== 'current' && userAccount.type !== 'savings') {
+      return res.status(400).send({
+        status: 400,
+        message: 'User account have to be either savings or current',
+      });
+    }
+
+    const enterData = `INSERT INTO account(createdon,owner,email,type) VALUES('${userAccount.createdOn}','${owner}','${email}','${userAccount.type}') RETURNING *;`;
+    const { rows: [getuserAccount] } = await pool.query(enterData);
+
+    console.log(getuserAccount);
+
+    res.status(201).send({
+      status: 201,
+      data: {
+        accountNumber: getuserAccount.accountno,
+        firstName: userAccount.firstName,
+        lastName: userAccount.lastName,
+        email: getuserAccount.email,
+        type: userAccount.type,
+        openingBalance: getuserAccount.balance,
+      },
+    });
+  },
+
   async getAccountsByEmail(req, res) {
     let { email } = req.params;
 
@@ -109,7 +145,6 @@ const Users = {
       data: accounts,
     });
   },
-
 };
 
 export default Users;

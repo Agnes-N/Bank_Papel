@@ -141,3 +141,39 @@ describe('user accounts by email', () => {
       });
   });
 });
+
+describe('Test create account', () => {
+  it('user should create account', (done) => {
+    const token = process.env.USER_TOKEN;
+    chai.request(app)
+      .post('/accounts')
+      .set('Authorization', token)
+      .send(users[11])
+      .end((err, res) => {
+        expect(res).to.have.status(201);
+        done();
+      });
+  });
+  it('date is number', (done) => {
+    const token = process.env.USER_TOKEN;
+    chai.request(app)
+      .post('/accounts')
+      .set('Authorization', token)
+      .send(users[12])
+      .end((err, res) => {
+        expect(res).to.have.status(400);
+        done();
+      });
+  });
+  it('type should be savings or current', (done) => {
+    const token = process.env.USER_TOKEN;
+    chai.request(app)
+      .post('/accounts')
+      .set('Authorization', token)
+      .send(users[13])
+      .end((err, res) => {
+        expect(res).to.have.status(400);
+        done();
+      });
+  });
+});

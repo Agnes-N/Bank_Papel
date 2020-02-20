@@ -4,10 +4,6 @@ Papel is a light-weight core banking application that powers banking operations 
 
 This app is meant to support a single bank, where users can signup and create bank accounts online, but must visit the branch to withdraw or deposit money.
 
-## Live link
-
-You can find this application [here](https://agnes-n.github.io/Bank_Papel/)
-
 ## Notice
 
 Administrator email and password:
@@ -17,7 +13,7 @@ Administrator email and password:
 
 Cashieremail and password:
 
-- Email: a@gmail.com
+- Email: c@gmail.com
 - Password: 123
 
 To sign in as a user, just type in email and password of your choice then confirm password
@@ -42,9 +38,13 @@ To sign in as a user, just type in email and password of your choice then confir
 - Open the cloned folder and open index.html file with a web browser
 
 ## Technology used
-
  UI
   - HTML, CSS, and JavaScript
+ Backend
+  - NodeJS/Express
+  - PostgreSQL
+  - Mocha chai
+  - TRAVIS CI
 
 ## Project management tool
 This application was managed using [Pivot tracker](https://www.pivotaltracker.com/n/projects/2432318)

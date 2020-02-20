@@ -81,7 +81,7 @@ const Users = {
 
   async create_account(req, res) {
     const userAccount = {
-      createdOn: req.body.date,
+      createdOn: new Date(),
       firstName: req.Data.firstName,
       lastName: req.Data.lastName,
       type: req.body.type,
@@ -99,8 +99,6 @@ const Users = {
 
     const enterData = `INSERT INTO account(createdon,owner,email,type) VALUES('${userAccount.createdOn}','${owner}','${email}','${userAccount.type}') RETURNING *;`;
     const { rows: [getuserAccount] } = await pool.query(enterData);
-
-    console.log(getuserAccount);
 
     res.status(201).send({
       status: 201,
@@ -143,6 +141,30 @@ const Users = {
     return res.status(200).send({
       status: 200,
       data: accounts,
+    });
+  },
+
+  async get_Account(req, res) {
+    const accNum = req.params.accountNumber;
+
+    if (!req.params.accountNumber) {
+      return res.status(400).send({
+        status: 400,
+        error: 'enter account number',
+      });
+    }
+
+    const getAcc = `SELECT * FROM account WHERE accountno = ${accNum};`;
+    const { rows } = await pool.query(getAcc);
+    if (!rows[0]) {
+      return res.status(404).send({
+        status: 404,
+        error: 'Account does not exit',
+      });
+    }
+    return res.status(200).send({
+      status: 200,
+      data: rows[0],
     });
   },
 };

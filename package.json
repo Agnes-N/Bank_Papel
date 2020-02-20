@@ -8,7 +8,8 @@
     "start": "node server/app.js",
     "dev": "npm run createTable && nodemon --exec babel-node server/app.js",
     "createTable": "babel-node ./server/models/tables.js",
-    "makeTest": "babel-node ./server/models/testTables.js"
+    "makeTest": "babel-node ./server/models/testTables.js",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,6 @@
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
-    "@babel/node": "^7.8.4",
     "@babel/plugin-transform-regenerator": "^7.8.3",
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
@@ -47,6 +47,7 @@
     "swagger": "^0.7.5"
   },
   "devDependencies": {
+    "@babel/node": "^7.8.4",
     "coveralls": "^3.0.9",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",

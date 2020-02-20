@@ -154,7 +154,7 @@ describe('Test create account', () => {
         done();
       });
   });
-  it('date is number', (done) => {
+  it('type should be savings or current', (done) => {
     const token = process.env.USER_TOKEN;
     chai.request(app)
       .post('/accounts')
@@ -165,14 +165,26 @@ describe('Test create account', () => {
         done();
       });
   });
-  it('type should be savings or current', (done) => {
+});
+
+describe('Test specific user account', () => {
+  it('user can view a specific account', (done) => {
     const token = process.env.USER_TOKEN;
     chai.request(app)
-      .post('/accounts')
+      .get('/accounts/1')
       .set('Authorization', token)
-      .send(users[13])
       .end((err, res) => {
-        expect(res).to.have.status(400);
+        expect(res).to.have.status(200);
+        done();
+      });
+  });
+  it('account number is not found', (done) => {
+    const token = process.env.USER_TOKEN;
+    chai.request(app)
+      .get('/accounts/4')
+      .set('Authorization', token)
+      .end((err, res) => {
+        expect(res).to.have.status(404);
         done();
       });
   });

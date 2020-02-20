@@ -11,7 +11,7 @@ router.post('/auth/signup', validateSignup, users.signup);
 router.post('/auth/login', validateLogin, users.login);
 router.post('/accounts', [auth, validateAccount], users.create_account);
 
-
 router.get('/user/:email/accounts', auth, users.getAccountsByEmail);
+router.get('/accounts/:accountNumber', auth, users.get_Account);
 
 export default router;

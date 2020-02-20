@@ -117,3 +117,27 @@ describe('Test login', () => {
       });
   });
 });
+
+describe('user accounts by email', () => {
+  it('SHOW ALL USER ACCOUNTS', (done) => {
+    const token = process.env.USER_TOKEN;
+    chai.request(app)
+      .get('/user/agnes@gmail.com/accounts')
+      .set('Authorization', token)
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        done();
+      });
+  });
+
+  it('SHOULD  NOT SHOW', (done) => {
+    const token = process.env.USER_TOKEN;
+    chai.request(app)
+      .get('/user/agbvbv@gmail.com/accounts')
+      .set('Authorization', token)
+      .end((err, res) => {
+        expect(res).to.have.status(400);
+        done();
+      });
+  });
+});

@@ -38,10 +38,9 @@ To sign in as a user, just type in email and password of your choice then confir
 - Open the cloned folder and open index.html file with a web browser
 
 ## Technology used
- UI
-  - HTML, CSS, and JavaScript
-  
- Backend
+ UI: HTML, CSS, and JavaScript
+ 
+ Backend:
   - NodeJS/Express
   - PostgreSQL
   - Mocha chai

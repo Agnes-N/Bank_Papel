@@ -66,16 +66,16 @@ const users = [
   },
 
   {
-    date: '2020-01-01',
     type: 'savings',
   },
   {
-    date: '4fff',
-    type: 'savings',
-  },
-  {
-    date: '2020-01-01',
     type: '21rr',
+  },
+  {
+    accountNumber: '1',
+  },
+  {
+    accountNumber: 'dd1',
   },
 
 ];

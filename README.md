@@ -1,5 +1,11 @@
 # Bank_Papel
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/30ec3ecd9d8c2fe2cb09/maintainability)](https://codeclimate.com/github/Agnes-N/Bank_Papel/maintainability)
+
+[![Coverage Status](https://coveralls.io/repos/github/Agnes-N/Bank_Papel/badge.svg?branch=develop)](https://coveralls.io/github/Agnes-N/Bank_Papel?branch=develop)
+
+[![Build Status](https://travis-ci.org/Agnes-N/Bank_Papel.svg?branch=develop)](https://travis-ci.org/Agnes-N/Bank_Papel)
+
 Papel is a light-weight core banking application that powers banking operations like account creation, customer deposits, and withdrawals. 
 
 This app is meant to support a single bank, where users can signup and create bank accounts online, but must visit the branch to withdraw or deposit money.

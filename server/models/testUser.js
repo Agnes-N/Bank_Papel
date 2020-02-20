@@ -41,8 +41,6 @@ const users = [
     password: '',
   },
 
-  // test login
-
   {
     email: 'agnes@gmail.com',
     password: '123',
@@ -65,6 +63,19 @@ const users = [
   {
     email: 'agnes516@gmail.com',
     password: '7878787',
+  },
+
+  {
+    date: '2020-01-01',
+    type: 'savings',
+  },
+  {
+    date: '4fff',
+    type: 'savings',
+  },
+  {
+    date: '2020-01-01',
+    type: '21rr',
   },
 
 ];

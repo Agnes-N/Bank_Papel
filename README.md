@@ -40,6 +40,7 @@ To sign in as a user, just type in email and password of your choice then confir
 ## Technology used
  UI
   - HTML, CSS, and JavaScript
+  
  Backend
   - NodeJS/Express
   - PostgreSQL

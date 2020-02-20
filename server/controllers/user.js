@@ -79,7 +79,37 @@ const Users = {
     });
   },
 
-};
+  async getAccountsByEmail(req, res) {
+    let { email } = req.params;
 
+    if (email !== req.Data.email) {
+      return res.status(400).send({
+        status: 400,
+        error: 'email not found',
+      });
+    }
+
+    const email1 = `SELECT * FROM account WHERE email = '${email}';`;
+    const { rows } = await pool.query(email1);
+
+    const accounts = [];
+    rows.forEach((accountGot) => {
+      const account_details = {
+        createdOn: accountGot.createdon,
+        accountNumber: accountGot.accountno,
+        type: accountGot.type,
+        status: accountGot.status,
+        balance: accountGot.balance,
+      };
+      accounts.push(account_details);
+    });
+
+    return res.status(200).send({
+      status: 200,
+      data: accounts,
+    });
+  },
+
+};
 
 export default Users;

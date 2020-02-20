@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS account(
   balance FLOAT DEFAULT 0.00
 );
 
-INSERT INTO users (email, firstname,lastname,password,type,is_admin) VALUES ('agnes@gmail.com','agnes','reina','$2b$10$8skfDzkgRSkUB64YPtFvGOc3P8Viug8XgIRTvujRBm7eH14ILnZhy','admin','true')`;
+INSERT INTO users (email, firstname,lastname,password,type,is_admin) VALUES ('agnes@gmail.com','agnes','reina','$2b$10$8skfDzkgRSkUB64YPtFvGOc3P8Viug8XgIRTvujRBm7eH14ILnZhy','admin','true');
+INSERT INTO account (accountno, createdon,owner,email,type,status,balance) VALUES ('1','01-01-2010','reina martibe','agnes@gmail.com','current','active','10000.0');`;
 
 const createTables = async () => {
   await pool.query(users).then(() => {
